@@ -1,0 +1,68 @@
+Block Elements (<div>, <h1>...<h6>, <p>, <form>)
+    - Start on a new line
+    - Take full width
+
+Inline Elements (<span>, <img>, <a>, <label>, <input>)
+    - Do not start on a new line
+    - Take only the necessary width
+    - https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements
+
+<strong></strong>
+    - semantic tag for making text bold
+    - Replaces <b>bold</b>
+
+<em></em>
+    - semantic tag for making text italic
+
+Tag Attributes
+    - All tags can have attributes
+    - Always in Key/Value pairs (id="someId")
+    - provide information about an element
+
+* CSS
+-webkit-margin-before
+    - same as margin-top
+-webkit-margin-after
+    - same as margin-bottom
+-webkit-margin-start
+    - same as margin-left
+-webkit-margin-end
+    - same as margin-right
+
+<ul></ul>
+    - unordered list
+    - needs <li></li>
+    - default ==> padding: 1em;
+    - default ==> list-style-type: disc 
+    - default ==> margin-before: 1em; / margin-after: 1em;
+    - default ==> padding-start: 40px;
+    - * commonly used for Nav Bar to make elements float to the right
+
+lorem10 -> tab
+    - lorem ipsum upto 10 wordss
+
+<table></table>
+    - deprecated usage for layouts
+    - used for table / data / information (customer list)
+
+Quotations (semantic elements)
+        <blockquote cite="google.com">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente consectetur minus assumenda enim dolor, 
+            adipisci provident quia ipsum labore quam velit sunt cum quibusdam at sequi inventore eius impedit optio!
+        </blockquote>
+
+    <abbr>
+        <p>The <abbr title="World Wide Web">WWW</abbr> is awesome</p>
+
+    <cite>
+        <P><cite>HTML Crash Course</cite> by Me</P>
+
+HTML Semantic Tags
+    - Clearly describes its meaning to both the browser & the developer
+    - to layout the website
+    - <header></header> ==> logo, social media links 
+    - <nav></nav> ==> nav bar for quick access to different pages
+    - <section></section> ==> copy text for the homepage
+    - <article></article> ==> blog for each post
+    - <aside></aside> ==> side bar contents
+    - <footer></footer> ==> copyright / privacy policy 

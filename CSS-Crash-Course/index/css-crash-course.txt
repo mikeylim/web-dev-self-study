@@ -1,0 +1,47 @@
+* CSS
+    SASS / LESS
+        - allows us to use variables / conditionals
+    
+    Key rule
+        - keep the presentation, functionality, styling completely separate ==> efficient, practical, scalable
+
+Inline CSS
+    - Bad practice
+    - directly in the html element (NO!)
+
+Internal CSS
+    - in a html file between <head></head>
+    - Not recommended
+
+External CSS
+    - linking external .css file
+
+CSS Selector
+    a { background-color: yellow; }
+    - a ==> Selector
+    - background-color ==> property
+    - yellow ==> value
+
+Colors in CSS
+    - Color names ==> red
+    - HTML5 Color names ==> coral
+    - Hexadecimal ==> #00ff00
+    - RGB ==> rgb(0,0,255)
+
+Web Safe Fonts
+    - do not need to import ==> built in fonts
+    - "Times New Roman" ==> default fonts for html/css
+
+px, %, el for sizes
+    - use % for containers (responsive)
+
+link state for <a></a>
+    - a:hover ==> when hovered
+    - a:active ==> when clicked
+    - a:visited ==> after visiting
+
+box-sizing: border-box
+    - use this comfortably to add padding/border to an element without changing the actual size of container
+
+Positioning in CSS
+    - position: fixed; ==> useful for navbar / social media icons / coupons
