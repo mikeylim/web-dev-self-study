@@ -18,13 +18,41 @@
 # 1 0 -1 -1 2 -1 -1 -1 -1 4 3 -1 -1 7 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 
 
+# S = list(input())
+
+# alphabetList = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+
+# for i in range(len(S)):
+#     if(S[i] == )
+
+
+# for alphabet in alphabetList:
+#     if(S[0] == alphabet):
+#         # print("letter - ", letter)
+#         print(alphabetList.index(alphabet), end=" ")  # too early!
+#         break
+#     else:
+#         # print("alphabet - ", alphabet)
+#         print('-1', end=" ")
+#         continue
+
+
+
 s = list(map(str, input()))
+print('s =', s)
 aList = list('abcdefghijklmnopqrstuvwxyz')
+print('aList =', aList)
 array = [-1 for i in range(len(aList))]
+print('array =', array)
 
 for i in range(len(s)):
+    print('s[i] =', s[i])
+    print('aList.index(s[i]) =', aList.index(s[i]))
+    print('array[aList.index(s[i])] =', array[aList.index(s[i])])
     if array[aList.index(s[i])] == -1:
         array[aList.index(s[i])] = i
+        print('array in for loop =', array)
 
 for j in array:
     print(j, end=" ")
