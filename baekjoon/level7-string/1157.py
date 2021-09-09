@@ -9,30 +9,36 @@
 # 출력
 # 첫째 줄에 이 단어에서 가장 많이 사용된 알파벳을 대문자로 출력한다. 단, 가장 많이 사용된 알파벳이 여러 개 존재하는 경우에는 ?를 출력한다.
 
+
+# # using dictionary
 word = input().upper()
-wordList = list(word)
-dic = {}
+if len(word) > 1000000:
+    print('wrong')
+else:    
+    wordList = list(word)
+    dic = {}
 
-for alphabet in wordList:
-    dic[alphabet] = word.count(alphabet)
+    for alphabet in wordList:
+        dic[alphabet] = word.count(alphabet)
 
-
-k_v_exchanged = {}
-
-for key, val in dic.items():
-    if val not in k_v_exchanged:
-        k_v_exchanged[val] = [key]
+    max_value = max(dic.values())
+    max_keys = [k for k,v in dic.items() if v == max_value]
+    if len(max_keys) > 1:
+        print('?')
     else:
-        k_v_exchanged[val].append(key)
+        print(max_keys[0])
 
-max_value = None
-max_key = None
+# 답안지
+words = input().upper()
+unique_words = list(set(words))  # 입력받은 문자열에서 중복값을 제거
 
-for key, val in dic.items():
-    if len(k_v_exchanged[val]) > 1:
-        max_key = "?"
-    elif max_value is None or max_value < val:
-        max_value = val
-        max_key = key
-        
-print(max_key, "->", max_value)
+cnt_list = []
+for x in unique_words :
+    cnt = words.count(x)
+    cnt_list.append(cnt)  # count 숫자를 리스트에 append
+
+if cnt_list.count(max(cnt_list)) > 1 :  # count 숫자 최대값이 중복되면
+    print('?')
+else :
+    max_index = cnt_list.index(max(cnt_list))  # count 숫자 최대값 인덱스(위치)
+    print(unique_words[max_index])
