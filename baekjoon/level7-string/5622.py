@@ -15,3 +15,29 @@
 # 예제 출력 1 
 # 13
 
+# 1 = 2s
+# abc = 3s
+# def = 4s
+# ghi = 5s
+# jkl = 6s
+# mno = 7s
+# pqrs = 8s
+# tuv = 9s
+# wxyz = 10s
+# 0 = 11s ???
+
+dial = input().lower()
+dial_dict = {'a':3, 'b':3, 'c':3,
+            'd':4, 'e':4, 'f':4,
+            'g':5, 'h':5, 'i':5,
+            'j':6, 'k':6, 'l':6,
+            'm':7, 'n':7, 'o':7,
+            'p':8, 'q':8, 'r':8, 's':8,
+            't':9, 'u':9, 'v':9,
+            'w':10, 'x':10, 'y':10, 'z':10}
+time = 0
+for input_letter in dial:
+    for key in dial_dict:
+        if key in input_letter:
+            time += dial_dict[key]
+print(time)

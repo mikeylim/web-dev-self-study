@@ -13,14 +13,32 @@
 # 출력
 # 첫째 줄에 N의 사이클 길이를 출력한다.
 
-num = int(input())
+n = int(input())
+num = n
 count = 0
+while True:
+    if num < 10:
+        num *= 10
+    tenth = num // 10
+    oneth = num % 10
+    total = (tenth + oneth) % 10
+    num = (oneth * 10) + total
+    count += 1
+    if num == n:
+        break
+print(count)
 
-if num < 10:
-    num *= 10
-tenth = num // 10
-oneth = num % 10
-total = tenth + oneth
-num = int(str(tenth) + str(oneth))
-count += 1
-print(num)
+
+# # 답지
+# input_num = int(input())
+
+# num = input_num  # num 변수에 input_num을 지정
+# cnt = 0
+# while True:
+#     sum_num = (num // 10) + (num % 10)  # 각 자릿수를 더한수
+#     new_num = ((num % 10) * 10) + (sum_num % 10)  # 새로 만들어지는 수
+#     cnt += 1  # 사이클 카운트
+#     if new_num == input_num :
+#         break
+#     num = new_num  # num 변수에 last_num을 지정 
+# print(cnt)
