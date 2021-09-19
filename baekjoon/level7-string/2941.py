@@ -28,13 +28,15 @@
 
 word = input()
 croatia_list = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
-count = 0
 for letter in croatia_list:
     if letter in word:
-        word = word.replace(letter,'')
-        count += 1
-
+        word = word.replace(letter,'a')
 if len(word) > 0:
-    print(count+len(word))
-else:
-    print(count)
+    print(len(word))
+
+# a = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+# b = input()
+# for i in a:
+#     b = b.replace(i, 'a')
+#     print(b)
+# print(len(b))
