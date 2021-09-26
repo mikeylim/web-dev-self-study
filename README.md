@@ -1,2 +1,2 @@
 # web-dev-self-study
-Keeping progress of my self-studying web development
+Keeping progress web development self-study
