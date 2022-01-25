@@ -1,24 +1,25 @@
-x = input()
-sList = list(x)
-
-total = 0
-for s in sList:
-    if s == '(':
-        total += 1
-    elif s == ')':
-        total -= 1
-    if s == '[':
-        total += 2
-    elif s == ']':
-        total -= 2
-    if total < 0:
-        print('no')
-        print(total)
-        break
+while True:
+    s = input()
     if s == '.':
         break
-if total == 0:
-    print('yes')
-    print(total)
-if total > 0:
-    print('no')
+    stk = []
+    temp = True
+    for i in s:
+        if i == '(' or i == '[':
+            stk.append(i)
+        elif i == ')':
+            if not stk or stk[-1] == '[':
+                temp = False
+                break
+            elif stk[-1] == '(':
+                stk.pop()
+        elif i == ']':
+            if not stk or stk[-1] == '(':
+                temp = False
+                break
+            elif stk[-1] == '[':
+                stk.pop()
+    if temp == True and not stk:
+        print('yes')
+    else:
+        print('no')
