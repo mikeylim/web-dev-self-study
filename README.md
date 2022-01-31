@@ -1,2 +1,2 @@
-# web-dev-self-study
+# Web Development
 Studying Web Development
