@@ -22,7 +22,15 @@
 #include <stdio.h>
 
 int main() {
-    int x = [];
-    
+    int stuCheck[30] = { 0 };		// array checking for student who submitted 
+	for (int i = 0; i < 28; i++) {	// check stuNum of who submitted the work
+		int stuNum;
+		scanf("%d", &stuNum);
+		stuCheck[stuNum - 1] = 1;
+	}
+	for (int i = 0; i < 30; i++)	// print who stuNum who didn't sumbit the work
+		if (stuCheck[i] == 0)
+			printf("%d\n", i + 1);
+
     return 0;
 }
