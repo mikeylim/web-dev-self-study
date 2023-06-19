@@ -31,5 +31,6 @@
 # 예제 출력 2 
 # 0
 
-s = input()
-
+str = input()
+for n in range(len(str)):
+    print(str[n])
