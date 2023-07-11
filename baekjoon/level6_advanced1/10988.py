@@ -32,5 +32,11 @@
 # 0
 
 str = input()
-for n in range(len(str)):
-    print(str[n])
+result = 0 
+for n in range(int(len(str)/2)):
+    if str[n] == str[len(str) - 1 - n]:
+        result = 1
+    else:
+        result = 0
+        break
+print(result)
