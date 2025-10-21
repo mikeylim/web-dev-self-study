@@ -1,0 +1,13 @@
+/**
+ * @param {character[][]} board
+ * @return {boolean}
+ */
+var isValidSudoku = function(board) {
+    for (let row of board) {
+        // Each row must contain the digits 1-9 without repetition.
+        for (let num of row) {
+            
+        }
+    }
+    return true;
+};
